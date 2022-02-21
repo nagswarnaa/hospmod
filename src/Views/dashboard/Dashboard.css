@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .dashboard-options-container{
+    display: flex;
+    align-items: center;
+    background-color: var(--main);
+    height: 6rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .dashboard-option{
+    border-left: 2px solid var(--secondary);
+    color: var(--white);
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .non-hover:hover{
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    cursor: unset !important;
+  }
+
+  .dashboard-option:hover{
+    background-color: var(--secondary);
+
+  }
+
+  .option-link{
+    color: var(--white) !important;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .dashboard-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+  }
+
+  .side-options-container{
+    width: 20rem;
+    height: calc(75%);
+    background-color: var(--white);
+    border-radius: 1rem;
+    border: 1px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 2px 1px 50px 5px var(--border);
+  }
+
+  .side-options{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .side-options:hover{
+    background-color: var(--main);
+    color: var(--white);
+    border-radius: 2rem;
+  }
+
+  .dashboard-children{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: tomato;
+  }
+
+  :root{
+
+    --main: #0253B3;
+    --secondary: #18A4E0;
+    --white: #FFFFFF;
+    --background: #EFF2F4;
+    --dark: #303030;
+    --green: #3cb46e;
+    --red: #ff0000;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #080808;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    /* color: #0088a9; */
+    color: var(--main);
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+    
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  
