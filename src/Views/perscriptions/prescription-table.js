@@ -10,7 +10,7 @@ import { createNewPrescription } from "../../js/post"
 
 const PrescriptionTable = (props) => {
 
-    const params = useParams();
+
     let location = useLocation();
     console.log("location", location);
     // console.log(props)

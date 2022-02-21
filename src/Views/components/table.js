@@ -9,16 +9,16 @@ import { generateRandom_ID, getOnlyDate } from '../../js/utils';
 const DataTable = ({ tableData, headerData, keys, route }) => {
 
     const navigate = useNavigate()
-    let history = useHistory()
+
     const [selectedPage, setSelectedPage] = useState(1)
     const max = tableData.length / 6
     console.log("route", route)
-    const handleRoute = (route, rowData) => {
-        history.push({
-            pathname: route,
-            state: rowData
-        })
-    }
+    // const handleRoute = (route, rowData) => {
+    //     history.push({
+    //         pathname: route,
+    //         state: rowData
+    //     })
+    //}
 
     return (
         <div className={`table-container center-hv`}>
@@ -47,7 +47,7 @@ const DataTable = ({ tableData, headerData, keys, route }) => {
 
                         return (
                             <div
-                                onClick={() => handleRoute(route, rowData)}
+                                onClick={() => navigate(route, rowData)}
                                 className={`row-container`}
                                 key={generateRandom_ID()}>
                                 <TableRow {...{ rowData, keys, route, navigate }} />
